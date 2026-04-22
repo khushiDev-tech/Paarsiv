@@ -10,17 +10,203 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
-    <!-- Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="static/css/footer.css" />
+    <style>
+    
+/* SECTION */
+.sections {
+  padding: 80px 0;
+}
+
+/* LEFT */
+.badge-custom {
+  background: #e9ecef;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.title span {
+  color: #5bb596;
+}
+
+.subtext {
+    width: 80%;
+    font-size: 16px;
+    font-weight: 500;
+  margin-top: 20px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.divider {
+  width: 180px;
+  height: 3px;
+  background: #5bb596;
+  margin: 25px 0;
+  border-radius: 2px;
+}
+
+.btn-custom {
+  background: #5bb596;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* RIGHT */
+.cards-wrapper {
+  position: relative;
+}
+
+/* Globe background */
+.globe {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  opacity: 0.1; 
+}
+
+/* CARD */
+.solution-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #8db2a5;
+  transition: 0.3s;
+  height: 100%;
+}
+
+.solution-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-color: #5bb596;
+}
+
+/* ICON */
+.icon-box {
+  width: 50px;
+  height: 50px;
+  background: #eef3fa;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.icon-box i {
+  color: #5bb596;
+  font-size: 20px;
+}
+
+.card-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #666;
+}
+.viewport {
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+}
+
+.track {
+  will-change: transform;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.page {
+  height: 420px;
+  display: flex;
+  align-items: center;
+}
+
+/* RESPONSIVE */
+@media(max-width: 991px){
+  .title {
+    font-size: 34px;
+  }
+  .globe {
+    display: none;
+  }
+}
+
+ html, body {
+    overflow-x: hidden;
+  }
+  a, button,img {
+  cursor: none;
+} 
+/* Small Cursor */
+#cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #5FC79E;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+/* Big Cursor */
+#cursor-hover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 64px;
+  height: 64px;
+  background: #5FC79E;
+  border: 2px solid #5FC79E;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 9999;
+
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: all 0.2s ease;
+}
+
+</style>
   </head>
   <body>
+    <!-- Small Cursor -->
+<div id="cursor"></div>
+
+<!-- Big Cursor with Text -->
+<div id="cursor-hover">
+  Click
+</div>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
       <div class="container">
@@ -41,7 +227,7 @@
             <li class="nav-item">
               <a class="nav-link active" href="#">Home</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
+            <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Company</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
@@ -113,6 +299,167 @@
         </div>
       </div>
     </section>
+
+    <section class="herooo">
+  <div class="container-xl px-4">
+    <div class="row align-items-center g-5">
+ 
+      <!-- ── LEFT ── -->
+     <!-- ── LEFT ── -->
+  <div class="col-lg-6">
+        <span class="badge-pill">● TECHNOLOGY STACK</span>
+
+        <h1 class="main-title mt-3">
+          Seamlessly integrated <br>
+          <span>Modern Technologies</span>
+        </h1>
+
+        <p class="desc mt-3">
+          We architect systems where frontend, backend, databases, and
+          tooling work as a single cohesive unit — optimized for scale,
+          security, and performance.
+        </p>
+        <div class="con">
+
+    <div class="tags-wrapper">
+
+      <div class="tag">
+        <i class="bi bi-code-slash"></i>
+        <span>Web Development</span>
+      </div>
+
+      <div class="tag">
+        <i class="bi bi-phone"></i>
+        <span>Mobile Apps</span>
+      </div>
+
+      <div class="tag">
+        <i class="bi bi-database"></i>
+        <span>Backend Systems</span>
+      </div>
+
+      <div class="tag">
+        <i class="bi bi-palette"></i>
+        <span>UI/UX Design</span>
+      </div>
+
+      <div class="tag">
+        <i class="bi bi-bezier2"></i>
+        <span>Custom Softwares</span>
+      </div>
+
+    </div>
+
+  </div>
+
+      <div class="stats mt-5">
+  <div class="row text-center">
+
+    <div class="col-6 col-md-3 stat-item">
+      <div class="icon"><i class="bi bi-cpu"></i></div>
+      <h3>15+</h3>
+      <p>Technologies</p>
+    </div>
+
+    <div class="col-6 col-md-3 stat-item">
+      <div class="icon"><i class="bi bi-lightning-charge"></i></div>
+      <h3>50+</h3>
+      <p>Integrations</p>
+    </div>
+
+    <div class="col-6 col-md-3 stat-item">
+      <div class="icon"><i class="bi bi-shield-check"></i></div>
+      <h3>99.9%</h3>
+      <p>Uptime</p>
+    </div>
+
+    <div class="col-6 col-md-3 stat-item">
+      <div class="icon"><i class="bi bi-headphones"></i></div>
+      <h3>24/7</h3>
+      <p>Support</p>
+    </div>
+
+  </div>
+</div>
+      </div>
+ 
+      <!-- ── RIGHT ── -->
+      <div class="col-lg-6">
+        <div class="cards-scene">
+ 
+          <!-- LEFT COL — card 1 -->
+          <div class="fcard fc-frontend">
+            <div class="fcard-header">
+              <div class="fcard-icon ic-purple">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <div>
+                <div class="fcard-title">Frontend</div>
+                <div class="fcard-sub">Next.js, React.js</div>
+              </div>
+            </div>
+            <div class="fcard-lines">
+              <div class="fline fl-full"></div>
+              <div class="fline fl-medium"></div>
+            </div>
+          </div>
+ 
+          <!-- RIGHT COL — card 2 (staggered down) -->
+          <div class="fcard fc-backend">
+            <div class="fcard-header">
+              <div class="fcard-icon ic-slate">
+                <i class="fa-solid fa-server"></i>
+              </div>
+              <div>
+                <div class="fcard-title">Backend API</div>
+                <div class="fcard-sub">Node.js</div>
+              </div>
+            </div>
+            <div class="fcard-lines">
+              <div class="fline fl-full"></div>
+              <div class="fline fl-medium"></div>
+            </div>
+          </div>
+ 
+          <!-- LEFT COL — card 3 -->
+          <div class="fcard fc-custom">
+            <div class="fcard-header">
+              <div class="fcard-icon ic-rose">
+                <i class="fa-solid fa-window-restore"></i>
+              </div>
+              <div>
+                <div class="fcard-title">Custom Web Apps</div>
+                <div class="fcard-sub">Real Estate, EdTech, more</div>
+              </div>
+            </div>
+            <div class="fcard-lines">
+              <div class="fline fl-full"></div>
+              <div class="fline fl-medium"></div>
+            </div>
+          </div>
+ 
+          <!-- RIGHT COL — card 4 (staggered down) -->
+          <div class="fcard fc-mobile">
+            <div class="fcard-header">
+              <div class="fcard-icon ic-sky">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <div>
+                <div class="fcard-title">Mobile App</div>
+                <div class="fcard-sub">React Native</div>
+              </div>
+            </div>
+            <div class="fcard-lines">
+              <div class="fline fl-full"></div>
+              <div class="fline fl-medium"></div>
+            </div>
+          </div>
+ 
+        </div>
+      </div><!-- /col -->
+    </div><!-- /row -->
+  </div><!-- /container -->
+</section>
 
     <section class="technology">
       <!-- <h1>The Tools Behind <b>Our Solutions</b></h1>
@@ -275,62 +622,163 @@
         </div>
       </div>
     </section>
-    <div class="scene-box">
-      <div class="scene">
-        <div class="orbit-ring"></div>
+   
 
-        <!-- Center -->
-        <div class="node center-node">
-          <span class="tip"></span>
-          <img src="static/images/favicon.png" />
-          <span class="lbl"></span>
-        </div>
+   <section class="sections container main-section" id="mainSection">
 
-        <!-- Rotating -->
-        <div class="orbit-wrapper">
-          <div id="orbs"></div>
+
+<div class="row align-items-center g-5">
+
+  <!-- LEFT -->
+  <div class="col-lg-6 mb-5">
+    <div class="badge-custom">Industry Solutions</div>
+
+    <h1 class="title">
+      Trusted by <span>Satisfied Customers</span><br>
+      For Every Industry
+
+    </h1>
+
+    <p class="subtext">
+      With a keen focus on our clients’ needs, we ensure unparalleled service and support. Our team is dedicated to delivering results that exceed expectations, no matter the challenge. Through our commitment and expertise, we've built lasting relationships with our clients.
+Our team of highly skilled professionals is dedicated to providing exceptional service. We take pride in our ability to meet the diverse needs of our clients, ensuring their complete satisfaction.
+    </p>
+
+    <div class="divider"></div>
+
+    <button class="btn btn-custom">Complete Project</button>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="col-lg-6 cards-wrapper">
+
+  <!-- Globe -->
+  <svg class="globe" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="80" stroke="#c89a3a" fill="none" stroke-dasharray="3 6"/>
+  </svg>
+
+  <div class="viewport" id="vp">
+    <div class="track" id="track">
+
+      <!-- PAGE 1 -->
+      <div class="page">
+        <div class="row g-4">
+
+          <div class="col-md-6">
+            <div class="solution-card">
+              <div class="icon-box"><i class="fa-brands fa-salesforce"></i></div>
+              <div class="card-title">Salesforce</div>
+              <div class="card-text">CRM customization, automation.</div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="solution-card">
+              <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
+              <div class="card-title">Analytics</div>
+              <div class="card-text">Data dashboards and insights.</div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="solution-card">
+              <div class="icon-box"><i class="fa-solid fa-globe"></i></div>
+              <div class="card-title">Digital Services</div>
+              <div class="card-text">Transformation solutions.</div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="solution-card">
+              <div class="icon-box"><i class="fa-solid fa-cloud"></i></div>
+              <div class="card-title">Cloud</div>
+              <div class="card-text">Cloud infrastructure.</div>
+            </div>
+          </div>
+
         </div>
+      </div>
+
+      <!-- PAGE 2 -->
+      <div class="page">
+        <div class="row g-4">
+
+          <div class="col-md-6">
+            <div class="solution-card">
+              <div class="icon-box"><i class="fa-solid fa-code"></i></div>
+              <div class="card-title">Web Dev</div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="solution-card">
+              <div class="icon-box"><i class="fa-solid fa-rocket"></i></div>
+              <div class="card-title">Growth</div>
+            </div>
+          </div>
+           <div class="col-md-6">
+            <div class="solution-card">
+              <div class="icon-box"><i class="fa-solid fa-cloud"></i></div>
+              <div class="card-title">Cloud</div>
+              <div class="card-text">Cloud infrastructure.</div>
+            </div>
+          </div>
+           <div class="col-md-6">
+            <div class="solution-card">
+              <div class="icon-box"><i class="fa-solid fa-cloud"></i></div>
+              <div class="card-title">Cloud</div>
+              <div class="card-text">Cloud infrastructure.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+<!-- PAGE 3 -->
+<div class="page">
+  <div class="row g-4">
+
+    <div class="col-md-6">
+      <div class="solution-card">
+        <div class="icon-box"><i class="fa-solid fa-shield"></i></div>
+        <div class="card-title">Security</div>
+        <div class="card-text">Cyber protection systems.</div>
       </div>
     </div>
 
-    <section class="trusted">
-      <div class="trusted-container">
-        <!-- LEFT -->
-        <div class="trusted-left">
-          <h2>
-            Trusted by<br />
-            Satisfied Customers
-          </h2>
-
-          <p>
-            At Paarsiv, we prioritize our clients’ needs, delivering exceptional
-            service and unwavering support. Our dedicated team goes above and
-            beyond to exceed expectations, tackling challenges with expertise
-            and commitment.
-          </p>
-
-          <p>
-            With a focus on quality and results, we’ve built lasting
-            relationships based on trust and reliability. Our highly skilled
-            professionals take pride in offering tailored solutions.
-          </p>
-
-          <p>
-            At Paarsiv, your goals are our priority, and we are committed to
-            helping you achieve them with excellence.
-          </p>
-          <div class="trusted-btnn">
-            <a href="#" class="trusted-btn">Completed Projects</a>
-          </div>
-        </div>
-
-        <!-- RIGHT -->
-        <div class="trusted-right">
-          <!-- 👇 apni exact image yaha -->
-          <img src="static/images/about.png" alt="Illustration" />
-        </div>
+    <div class="col-md-6">
+      <div class="solution-card">
+        <div class="icon-box"><i class="fa-solid fa-database"></i></div>
+        <div class="card-title">Database</div>
+        <div class="card-text">Data management solutions.</div>
       </div>
-    </section>
+    </div>
+
+    <div class="col-md-6">
+      <div class="solution-card">
+        <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
+        <div class="card-title">Consulting</div>
+        <div class="card-text">IT consulting services.</div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="solution-card">
+        <div class="icon-box"><i class="fa-solid fa-headset"></i></div>
+        <div class="card-title">Support</div>
+        <div class="card-text">24/7 support services.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+</section>
 
     <section class="screenshot">
       <img src="static/images/screenshot.png" alt />
@@ -395,19 +843,8 @@
         </div>
       </div>
     </section>
-  <section class="testimonials">
- 
-  <h2>TESTIMONIALS</h2>
-<div class="underline"></div>
-<p class="top-text">Subscribe Easy Tutorials YouTube channel to watch more videos.</p>
- 
-  <div class="carousel-viewport">
-<div class="cards-track" id="track"></div>
-</div>
- 
-  <div class="dots" id="dots"></div>
- 
-</section>
+
+
 
     <section class="faq-section py-5">
       <div class="container">
@@ -538,6 +975,25 @@
       </div>
     </section>
 
+
+   <section class="testimonials">
+
+  <h2>TESTIMONIALS</h2>
+  <div class="underline"></div>
+
+  <p class="top-text">
+    Subscribe Easy Tutorials YouTube channel to watch more videos.
+  </p>
+
+  <div class="carousel-viewport">
+    <!-- ✅ UPDATED ID -->
+    <div class="testimonial-track" id="testimonialTrack"></div>
+  </div>
+
+  <!-- ✅ UPDATED ID -->
+  <div class="testimonial-dots" id="testimonialDots"></div>
+
+</section>
     <section class="contact-section">
       <div class="containerss">
         <!-- TOP TITLE -->
@@ -743,417 +1199,429 @@
         });
       });
     </script>
-   <script>
-
-
  
-const data = [
-
-  { img: "https://randomuser.me/api/portraits/men/11.jpg",   name: "Avinash Kr",   role: "Co-Founder at xyz" },
-
-  { img: "https://randomuser.me/api/portraits/men/32.jpg",   name: "Bharat Kunal", role: "Manager at xyz" },
-
-  { img: "https://randomuser.me/api/portraits/men/45.jpg",   name: "Prabhakar D",  role: "Founder / CEO at xyz" },
-
-  { img: "https://randomuser.me/api/portraits/women/65.jpg", name: "Anita Sharma", role: "Designer" },
-
-  { img: "https://randomuser.me/api/portraits/men/22.jpg",   name: "Rahul Mehta",  role: "Developer" }
-
-];
+<script>
+  let currentIndex = 0;
+let isAnimating = false;
+let isLocked = false;
+let lockedScrollY = 0;
+let canLock = true;
  
-const track         = document.getElementById("track");
-
-const dotsContainer = document.getElementById("dots");
+const track  = document.getElementById("track");
+const pages  = document.querySelectorAll(".page");
+const section = document.getElementById("mainSection");
+const vp     = document.querySelector(".viewport");
+const totalPages = pages.length;
  
-const CLONE_COUNT = 3;          // clones on each side
-
-const N           = data.length;
- 
-/* Card sizing — keep in sync with CSS */
-
-function cardWidth()  { return track.children[0]?.offsetWidth  || 320; }
-
-function cardGap()    {
-
-  const style = getComputedStyle(track);
-
-  return parseInt(style.gap) || 28;
-
+// ── GO TO CARD ────────────────────────────────────────────────
+function goToPage(index) {
+  if (isAnimating) return;
+  if (index < 0 || index >= totalPages) return;
+  isAnimating = true;
+  currentIndex = index;
+  track.style.transition = "transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)";
+  track.style.transform   = `translateY(-${index * vp.offsetHeight}px)`;
+  setTimeout(() => { isAnimating = false; }, 900);
 }
-
-function step()       { return cardWidth() + cardGap(); }
  
-/* Current "real" index (0 … N-1) */
+// ── LOCK ──────────────────────────────────────────────────────
+function lockPage(dir) {
+  isLocked      = true;
+  canLock       = false;
+  lockedScrollY = window.scrollY;
+ 
+  if (dir === "down") {
+    currentIndex = 0;
+    track.style.transition = "none";
+    track.style.transform  = "translateY(0)";
+  } else {
+    currentIndex = totalPages - 1;
+    track.style.transition = "none";
+    track.style.transform  = `translateY(-${(totalPages - 1) * vp.offsetHeight}px)`;
+  }
+}
+ 
+// ── UNLOCK ────────────────────────────────────────────────────
+function unlockPage(dir) {
+  isLocked   = false;
+  isAnimating = false;
+  window.scrollTo({ top: lockedScrollY + (dir === "down" ? 300 : -300), behavior: "smooth" });
+  setTimeout(() => { canLock = true; }, 2000);
+}
+ 
+// ── FREEZE SCROLL WHILE LOCKED ────────────────────────────────
+window.addEventListener("scroll", () => {
+  if (isLocked) window.scrollTo(0, lockedScrollY);
+});
+ 
+// ── WHEEL ─────────────────────────────────────────────────────
+window.addEventListener("wheel", (e) => {
+  const rect        = section.getBoundingClientRect();
+  const vh          = window.innerHeight;
+  const scrollingDown = e.deltaY > 0;
+ 
+  // ── Already locked → handle card scroll ──
+  if (isLocked) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (isAnimating) return;
+ 
+    if (scrollingDown) {
+      currentIndex < totalPages - 1 ? goToPage(currentIndex + 1) : unlockPage("down");
+    } else {
+      currentIndex > 0 ? goToPage(currentIndex - 1) : unlockPage("up");
+    }
+    return;
+  }
+ 
+  // ── Not locked: check if we should lock now ──
+  if (!canLock) return;
+ 
+  // Lock when scrolling DOWN and section top is about to leave top edge
+  const hitFromTop    = scrollingDown  && rect.top <= 10  && rect.top  >= -10;
+ 
+  // Lock when scrolling UP and section bottom is about to re-enter from bottom
+  const hitFromBottom = !scrollingDown && rect.bottom >= vh - 10 && rect.bottom <= vh + 10;
+ 
+  if (hitFromTop || hitFromBottom) {
+    e.preventDefault();
+    lockPage(scrollingDown ? "down" : "up");
+  }
+ 
+}, { passive: false, capture: true });
+ 
+// ── RESET CARDS WHEN SECTION FULLY OUT OF VIEW ───────────────
+window.addEventListener("scroll", () => {
+  if (isLocked) return;
+  const rect = section.getBoundingClientRect();
+  if (rect.bottom < 0 || rect.top > window.innerHeight) {
+    currentIndex = 0;
+    track.style.transition = "none";
+    track.style.transform  = "translateY(0)";
+  }
+});
+</script>
 
-let current   = 0;
+<script>
 
+const data = [
+  { img: "https://randomuser.me/api/portraits/men/11.jpg", name: "Avinash Kr", role: "Co-Founder at xyz" },
+  { img: "https://randomuser.me/api/portraits/men/32.jpg", name: "Bharat Kunal", role: "Manager at xyz" },
+  { img: "https://randomuser.me/api/portraits/men/45.jpg", name: "Prabhakar D", role: "Founder / CEO at xyz" },
+  { img: "https://randomuser.me/api/portraits/women/65.jpg", name: "Anita Sharma", role: "Designer" },
+  { img: "https://randomuser.me/api/portraits/men/22.jpg", name: "Rahul Mehta", role: "Developer" }
+];
+
+const tracks = document.getElementById("testimonialTrack");
+const dotsContainer = document.getElementById("testimonialDots");
+
+const CLONE_COUNT = 3;
+const N = data.length;
+
+let current = 0;
 let autoTimer = null;
 
-let isJumping = false;
- 
-/* ── Make one card element ── */
+// =====================
+// SIZE HELPERS
+// =====================
+function cardWidth() {
+  return tracks.children[0]?.offsetWidth || 320;
+}
 
-function makeCard(d, dataIndex) {
+function cardGap() {
+  const style = getComputedStyle(tracks);
+  return parseInt(style.gap) || 28;
+}
 
+function step() {
+  return cardWidth() + cardGap();
+}
+
+// =====================
+// CREATE CARD
+// =====================
+function makeCard(d, i) {
   const card = document.createElement("div");
+  card.className = "testimonial-card";
+  card.dataset.index = i;
 
-  card.className = "card";
-
-  card.dataset.index = dataIndex;   // real data index
- 
   card.innerHTML = `
-<div class="avatar-wrap">
-<img src="${d.img}" alt="${d.name}">
-</div>
-<p>" Like this video and ask your questions in comment section,
-
-       don't forget to Subscribe Easy Tutorials YouTube channel. "</p>
-<h4>${d.name}</h4>
-<span class="role">${d.role}</span>
-
+    <div class="avatar-wrap">
+      <img src="${d.img}" alt="${d.name}">
+    </div>
+    <p>Sample testimonial text here</p>
+    <h4>${d.name}</h4>
+    <span class="role">${d.role}</span>
   `;
- 
+
   return card;
-
 }
- 
-/* ── Build track: [clones-end | real cards | clones-start] ── */
 
+// =====================
+// BUILD TRACK
+// =====================
 function buildTrack() {
+  tracks.innerHTML = "";
 
-  track.innerHTML = "";
- 
-  /* Prepend last CLONE_COUNT real cards as clones */
-
+  // PRE CLONES
   for (let i = N - CLONE_COUNT; i < N; i++) {
-
     const clone = makeCard(data[i], i);
-
     clone.dataset.clone = "pre";
-
-    track.appendChild(clone);
-
+    tracks.appendChild(clone);
   }
- 
-  /* Real cards */
 
+  // REAL
   data.forEach((d, i) => {
-
-    track.appendChild(makeCard(d, i));
-
+    tracks.appendChild(makeCard(d, i));
   });
- 
-  /* Append first CLONE_COUNT real cards as clones */
 
+  // POST CLONES
   for (let i = 0; i < CLONE_COUNT; i++) {
-
     const clone = makeCard(data[i], i);
-
     clone.dataset.clone = "post";
-
-    track.appendChild(clone);
-
+    tracks.appendChild(clone);
   }
-
 }
- 
-/* ── Index of the DOM node for a given real index ──
 
-   Real cards start at position CLONE_COUNT in the DOM */
-
-function domIndex(realIndex) {
-
-  return CLONE_COUNT + realIndex;
-
+// =====================
+// POSITIONING
+// =====================
+function domIndex(i) {
+  return CLONE_COUNT + i;
 }
- 
-/* ── Offset so the target DOM node is centred ── */
 
 function getOffset(domIdx) {
+  const viewW = tracks.parentElement.clientWidth;
+  const s = step();
+  const cw = cardWidth();
 
-  const viewW      = track.parentElement.clientWidth;
-
-  const s          = step();
-
-  const cw         = cardWidth();
-
-  const cardCentre = domIdx * s + cw / 2;
-
-  return viewW / 2 - cardCentre;
-
+  return viewW / 2 - (domIdx * s + cw / 2);
 }
- 
-/* ── Apply active class to the correct card ── */
 
+// =====================
+// UI UPDATE
+// =====================
 function updateActive() {
-
-  [...track.children].forEach(card => {
-
-    card.classList.toggle("active", +card.dataset.index === current
-&& !card.dataset.clone);
-
+  [...tracks.children].forEach(card => {
+    card.classList.toggle(
+      "active",
+      +card.dataset.index === current && !card.dataset.clone
+    );
   });
-
 }
- 
-/* ── Update dots ── */
 
 function updateDots() {
-
   [...dotsContainer.children].forEach((dot, i) => {
-
     dot.classList.toggle("active-dot", i === current);
-
   });
-
 }
- 
-/* ── Core: slide to a real index ── */
 
-function goTo(realIndex, animate = true) {
+// =====================
+// SLIDE
+// =====================
+function goTo(i, animate = true) {
+  current = (i + N) % N;
 
-  current = ((realIndex % N) + N) % N;
- 
-  const targetDom = domIndex(current);
- 
-  if (animate) {
+  tracks.style.transition = animate
+    ? "transform 0.6s ease"
+    : "none";
 
-    track.style.transition = "transform 0.55s cubic-bezier(0.45,0,0.2,1)";
-
-  } else {
-
-    track.style.transition = "none";
-
-  }
- 
-  track.style.transform = `translateX(${getOffset(targetDom)}px)`;
+  tracks.style.transform = `translateX(${getOffset(domIndex(current))}px)`;
 
   updateActive();
-
   updateDots();
-
 }
- 
-/* ── After sliding INTO a clone, silently jump to the real card ── */
 
-function handleCloneJump() {
+// =====================
+// LOOP FIX (CLONE JUMP)
+// =====================
+tracks.addEventListener("transitionend", () => {
+  const tx = new DOMMatrix(getComputedStyle(tracks).transform).m41;
+  const viewW = tracks.parentElement.clientWidth;
+  const s = step();
+  const cw = cardWidth();
 
-  if (isJumping) return;
- 
-  const allCards   = [...track.children];
+  const domPos = Math.round((viewW / 2 - cw / 2 - tx) / s);
 
-  const totalCards = allCards.length;
- 
-  /* Current DOM position (reverse-engineer from transform) */
-
-  const tx         = new DOMMatrix(getComputedStyle(track).transform).m41;
-
-  const viewW      = track.parentElement.clientWidth;
-
-  const cw         = cardWidth();
-
-  const s          = step();
- 
-  // Which DOM index is roughly centred?
-
-  const centredDom = Math.round((viewW / 2 - cw / 2 - tx) / s);
- 
-  const isPre  = centredDom < CLONE_COUNT;
-
-  const isPost = centredDom >= CLONE_COUNT + N;
- 
-  if (isPre || isPost) {
-
-    isJumping = true;
-
-    const realDom = domIndex(current);
- 
-    /* Snap silently */
-
-    track.style.transition = "none";
-
-    track.style.transform  = `translateX(${getOffset(realDom)}px)`;
- 
-    /* Force reflow so the snap registers before next transition */
-
-    track.getBoundingClientRect();
-
-    isJumping = false;
-
+  if (domPos < CLONE_COUNT || domPos >= CLONE_COUNT + N) {
+    tracks.style.transition = "none";
+    tracks.style.transform = `translateX(${getOffset(domIndex(current))}px)`;
   }
+});
 
-}
- 
-/* ── Listen for transition end to handle clone jumps ── */
+// =====================
+// NEXT / PREV
+// =====================
+function next() {
 
-track.addEventListener("transitionend", handleCloneJump);
- 
-/* ── Next / Prev helpers ── */
-
-function next(userClick = false) {
-
-  /* If currently at last real card, slide into the post-clone first */
-
+  // LAST → FIRST case
   if (current === N - 1) {
 
-    /* Slide to the post-clone of card 0 */
+    // move to clone (no dot change yet)
+    const cloneDom = CLONE_COUNT + N;
 
-    const postCloneDom = CLONE_COUNT + N;   // first post-clone position
+    tracks.style.transition = "transform 0.6s ease";
+    tracks.style.transform = `translateX(${getOffset(cloneDom)}px)`;
 
-    track.style.transition = "transform 0.55s cubic-bezier(0.45,0,0.2,1)";
-
-    track.style.transform  = `translateX(${getOffset(postCloneDom)}px)`;
- 
-    /* After animation, jump silently and update current */
-
+    // 👇 WAIT animation end
     setTimeout(() => {
 
       current = 0;
 
-      track.style.transition = "none";
+      // silent jump
+      tracks.style.transition = "none";
+      tracks.style.transform = `translateX(${getOffset(domIndex(0))}px)`;
 
-      track.style.transform  = `translateX(${getOffset(domIndex(0))}px)`;
-
-      track.getBoundingClientRect();
-
+      // 👇 DOT UPDATE AFTER JUMP (no flicker)
       updateActive();
-
       updateDots();
 
-    }, 560);
+    }, 600);
 
   } else {
-
-    goTo(current + 1);
-
+    current++;
+    goTo(current);
   }
- 
-  if (userClick) resetAuto();
-
 }
- 
-function prev(userClick = false) {
+
+function prev() {
 
   if (current === 0) {
 
-    /* Slide to the pre-clone of last card */
+    const cloneDom = CLONE_COUNT - 1;
 
-    const preCloneDom = CLONE_COUNT - 1;   // last pre-clone
+    tracks.style.transition = "transform 0.6s ease";
+    tracks.style.transform = `translateX(${getOffset(cloneDom)}px)`;
 
-    track.style.transition = "transform 0.55s cubic-bezier(0.45,0,0.2,1)";
-
-    track.style.transform  = `translateX(${getOffset(preCloneDom)}px)`;
- 
     setTimeout(() => {
 
       current = N - 1;
 
-      track.style.transition = "none";
-
-      track.style.transform  = `translateX(${getOffset(domIndex(N - 1))}px)`;
-
-      track.getBoundingClientRect();
+      tracks.style.transition = "none";
+      tracks.style.transform = `translateX(${getOffset(domIndex(current))}px)`;
 
       updateActive();
-
       updateDots();
 
-    }, 560);
+    }, 600);
 
   } else {
-
-    goTo(current - 1);
-
+    current--;
+    goTo(current);
   }
- 
-  if (userClick) resetAuto();
-
 }
- 
-/* ── Dots ── */
-
+// =====================
+// DOTS
+// =====================
 function buildDots() {
+  dotsContainer.innerHTML = "";
 
   data.forEach((_, i) => {
-
     const dot = document.createElement("span");
-
-    dot.addEventListener("click", () => { goTo(i); resetAuto(); });
-
+    dot.onclick = () => goTo(i);
     dotsContainer.appendChild(dot);
-
   });
-
 }
- 
-/* ── Auto slide ── */
 
+// =====================
+// AUTO SLIDE
+// =====================
 function startAuto() {
-
-  autoTimer = setInterval(() => next(), 3000);
-
+  autoTimer = setInterval(next, 3000);
 }
- 
-function resetAuto() {
 
-  clearInterval(autoTimer);
+// =====================
+// SWIPE
+// =====================
+let startX = 0;
 
-  startAuto();
+tracks.addEventListener("pointerdown", e => startX = e.clientX);
 
-}
- 
-/* ── Touch / swipe ── */
+tracks.addEventListener("pointerup", e => {
+  const diff = startX - e.clientX;
 
-let touchStartX = 0;
-
-track.addEventListener("pointerdown", e => { touchStartX = e.clientX; });
-
-track.addEventListener("pointerup",   e => {
-
-  const diff = touchStartX - e.clientX;
-
-  if (Math.abs(diff) > 40) diff > 0 ? next(true) : prev(true);
-
+  if (Math.abs(diff) > 40) {
+    diff > 0 ? next() : prev();
+  }
 });
- 
-/* ── Init ── */
 
+// =====================
+// INIT
+// =====================
 buildTrack();
-
 buildDots();
- 
-/* Position at first real card — no animation */
 
-track.style.transition = "none";
-
-track.style.transform  = `translateX(${getOffset(domIndex(current))}px)`;
+tracks.style.transition = "none";
+tracks.style.transform = `translateX(${getOffset(domIndex(current))}px)`;
 
 updateActive();
-
 updateDots();
- 
-requestAnimationFrame(() => {
 
-  requestAnimationFrame(() => {
+startAuto();
 
-    startAuto();
-
-  });
-
-});
- 
-/* Recalculate on resize */
-
+// RESIZE FIX
 window.addEventListener("resize", () => {
+  tracks.style.transition = "none";
+  tracks.style.transform = `translateX(${getOffset(domIndex(current))}px)`;
+});
 
-  track.style.transition = "none";
-
-  track.style.transform  = `translateX(${getOffset(domIndex(current))}px)`;
-
+</script>
+<script>
+  document.querySelectorAll('.pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+    });
+  });
+</script>
+<script>
+  const cursor = document.getElementById("cursor");
+const hoverCursor = document.getElementById("cursor-hover");  
+ 
+// move both cursors
+document.addEventListener("mousemove", (e) => {
+  cursor.style.top = e.clientY + "px";
+  cursor.style.left = e.clientX + "px";
+ 
+ 
+  hoverCursor.style.top = e.clientY + "px";
+  hoverCursor.style.left = e.clientX + "px";
+ 
 });
  
+// hover elements
+const hoverItems = document.querySelectorAll("a,button, img");
+ 
+hoverItems.forEach(item => {
+  item.addEventListener("mouseenter", () => {
+    cursor.style.opacity = "0"; // hide small ring
+ 
+    hoverCursor.style.opacity = "1";
+    hoverCursor.style.transform = "translate(-50%, -50%) scale(1)";
+    hoverCursor.innerText = item.getAttribute("data-cursor") || "Click";
+ 
+ 
+ 
+ const color = item.getAttribute("data-cursor-color");
+    hoverCursor.style.backgroundColor = color || "#5FC79E";
+ 
+     const textColor = item.getAttribute("data-cursor-text-color");
+    hoverCursor.style.color = textColor || "#fff";
+ 
+    const ringColor = item.getAttribute("data-cursor-ring");
+    cursor.style.borderColor = ringColor || "#5FC79E";
+ 
+  });
+ 
+  item.addEventListener("mouseleave", () => {
+    cursor.style.opacity = "1";
+   
+    hoverCursor.style.opacity = "0";
+    hoverCursor.style.transform = "translate(-50%, -50%) scale(0.5)";
+  });
+ 
+});
 </script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
