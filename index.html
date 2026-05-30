@@ -443,7 +443,84 @@
   }
 }
 
+
+  .mission-vision-section {
+   /*   max-height: 100vh;*/
+   min-height:100vh;
+      width: 100%;
+        background-image: url('bg.png');
+      /* Background image is embedded as base64 inside the full file */
+     
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+ 
+    .content-wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 96px 32px;
+    }
+ 
+    @media (min-width: 1024px) {
+      .content-wrapper {
+        padding: 128px 64px;
+      }
+    }
+ 
+    .text-container {
+      max-width: 450px;
+    }
+ 
+    .block {
+      margin-bottom: 80px;
+    }
+ 
+    .block:last-child {
+      margin-bottom: 0;
+    }
+ 
+    .icon {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      margin-bottom: 20px;
+      display: block;
+    }
+ 
+    .heading {
+      color: #2dbf9c;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+ 
+    .description {
+      color: #94a3b8;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+ 
+    /* Scroll-triggered fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+ 
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
       
+
+      .icon{
+        width:56px ;
+        height:56px;
+      } 
     </style>
   </head>
   <body>
@@ -1168,9 +1245,43 @@
       <!-- /container -->
     </section>
 
-    <section class="screenshot">
+    <!-- <section class="screenshot">
       <img src="static/images/screenshot.png" alt />
-    </section>
+    </section> -->
+
+    <main class="mission-vision-section">
+    <div class="content-wrapper">
+      <div class="text-container">
+        <!-- Mission -->
+        <section class="block fade-in">
+          <i class="fa-solid fa-bullseye"></i>
+          <!-- <img src="/* icon-mission.png base64 embedded */" alt="Mission icon" class="icon" width="56" height="56"> -->
+          <h2 class="heading">Mission</h2>
+          <p class="description">
+            Our mission is to empower individuals and organizations with
+            advanced IT solutions that drive quality and effectiveness. We
+            deliver personalized, innovative approaches to complex
+            challenges, fostering collaboration and growth to help clients
+            thrive in a dynamic digital world.
+          </p>
+        </section>
+ 
+        <!-- Vision -->
+        <section class="block fade-in">
+          <i class="fa-solid fa-eye class"></i>
+          <!-- <img src="/* icon-vision.png base64 embedded */" alt="Vision icon" class="icon" width="56" height="56"> -->
+          <h2 class="heading">Vision</h2>
+          <p class="description">
+            Our vision is to lead IT innovation by setting new standards and
+            pushing technological boundaries. We focus on excellence,
+            sustainability, and client success, aiming to be the trusted
+            partner that empowers organizations to thrive and deliver
+            lasting value in a dynamic digital world.
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
 
     <section class="testimonial-section">
       <div class="slider-container">
@@ -1870,7 +1981,26 @@
         }
       });
     </script>
-
+  <script>
+    // Scroll-triggered fade-in animation
+    document.addEventListener('DOMContentLoaded', function() {
+      const fadeElements = document.querySelectorAll('.fade-in');
+ 
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+      });
+ 
+      fadeElements.forEach(el => observer.observe(el));
+    });
+  </script>
     <script>
       const slider = document.getElementById("slider");
       const cardss = document.querySelectorAll(".testimonial-card");
