@@ -4,18 +4,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <style>
-    </style>
+       
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
             rel="stylesheet" />
+            <link rel="stylesheet" href="static/css/footer.css">
         <link rel="stylesheet" href="service.css">
+          <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+      
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
             <div class="container">
-                <a class="navbar-brand logo" href="#"><img
-                        src="static/images/paarsiv.logo.png" alt /></a>
+               
+                        <a class="navbar-brand logo" href="#">
+  <img id="logo" src="static/images/paarsiv.logo.png" alt="">
+</a>
 
                 <button
                     class="navbar-toggler"
@@ -28,10 +35,10 @@
                     id="nav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Home</a>
+                            <a class="nav-link active" href="index.html">Home</a>
                         </li>
                         <li class="nav-item"><a class="nav-link"
-                                href="#">Service</a></li>
+                                href="service.html">Service</a></li>
                         <li class="nav-item"><a class="nav-link"
                                 href="#">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link"
@@ -47,7 +54,8 @@
         </nav>
 
         <section class="hero-section">
-            <img src="images/service.jpg" class="hero-img" alt="service">
+            <img src="static/images/DevOps.webp" class="hero-img" alt="service">
+             
 
             <div class="overlay"></div>
 
@@ -56,114 +64,362 @@
             </div>
         </section>
 
-        <section class="services">
-            <h2 class="title">Services</h2>
 
-            <div class="grid">
 
-                <div class="srv-card">
-                    <h3 class="srv-card-title">Salesforce Development</h3>
-                    <p class="srv-card-text">Use Salesforce to change the strategy of your business!
-                        By increasing
-                        audience engagement and producing amazing commercial
-                        outcomes, our experience
-                        will assist you in achieving remarkable results. Allow
-                        us to assist you in making the most of Salesforce
-                        to open up new avenues for the expansion and success of
-                        your business.</p>
-                    <a href="#" class="btn-read">Read More</a>
-                </div>
+<section class="services-section">
+  <div class="services-container">
 
-                <div class="srv-card">
-                    <h3 class="srv-card-title">Lead Generation</h3>
-                    <p class="srv-card-text">Realize your growth potential with smart lead generation
-                        techniques. Our unique approach combines single-tap,
-                        double-tap, HQL and BANT methods to efficiently fill
-                        your sales funnel.
-                        By using our expert instructions and the most advanced
-                        tools, you can improve your sales strategy and
-                        succeed.</p>
-                    <a href="#" class="btn-read">Read More</a>
-                </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+      <h3>Software Engineering</h3>
+      <p>Full-stack web and mobile development using React, Laravel, Flutter, and modern frameworks for robust, scalable applications.</p>
+      <a href="#">Learn More <span>→</span></a>
+    </div>
 
-                <div class="srv-card">
-                    <h3 class="srv-card-title">Demand Generation</h3>
-                    <p class="srv-card-text">By using targeted marketing strategies (such as account
-                        -based marketing (ABM) and advanced demand generation
-                        technology) to improve the demand for products or
-                        services. Strengthen your market business, attract
-                        potential customers with high quality and speed up your
-                        business growth and success through innovation and
-                        effective methods.</p>
-                   <a href="#" class="btn-read">Read More</a>
-                </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-solid fa-flask"></i></div>
+      <h3>AI & Data Intelligence</h3>
+      <p>Custom AI solutions, machine learning models, NLP, computer vision, and data analytics powered by TensorFlow, PyTorch, and Power BI.</p>
+      <a href="#">Learn More <span>→</span></a>
+    </div>
 
-                <div class="srv-card">
-                    <h3 class="srv-card-title">Account Based Marketing</h3>
-                    <p class="srv-card-text">Unlock power in personal marketing! With the most
-                        advanced marketing technologies based on accounts, you
-                        can reset the most valuable target account and customize
-                        your method to resonate with each goal. By creating
-                        content
-                        and directly expressing its unique needs and interests,
-                        you will cause a meaningful connection, promote
-                        participation and promote the conversion.</p>
-                   <a href="#" class="btn-read">Read More</a>
-                </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-solid fa-cloud"></i></div>
+      <h3>Cloud & DevOps</h3>
+      <p>AWS, Azure, GCP cloud migrations, CI/CD pipelines, Kubernetes orchestration, and Infrastructure as Code with Terraform.</p>
+      <a href="#">Learn More <span>→</span></a>
+    </div>
 
-                 <div class="srv-card">
-                    <h3 class="srv-card-title">Marketing Automation</h3>
-                    <p class="srv-card-text">By customizing solutions based on your unique business
-                        needs, we can leverage advanced automation solutions to
-                        increase marketing effectiveness. To increase marketing
-                        efficiency and drive success,
-                        streamline processes with customized strategies that
-                        reduce physical effort and deliver superior results.</p>
-                    <a href="#" class="btn-read">Read More</a>
-                </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-solid fa-shield"></i></div>
+      <h3>Cybersecurity</h3>
+      <p>Protect your digital assets with penetration testing, SOC monitoring, DevSecOps, and compliance frameworks (ISO 27001, SOC 2).</p>
+      <a href="#">Learn More <span>→</span></a>
+    </div>
 
-                <div class="srv-card">
-                    <h3 class="srv-card-title">OutSystems Development</h3>
-                    <p class="srv-card-text">Use OutSystems to transform your digital environment.
-                        With our rapid application
-                        development platform, you can create unique apps with
-                        less coding effort and at a lower cost.
-                        Leverage your creativity and optimize your development
-                        workflow with robust, intuitive tools
-                        engineered for effectiveness and expandability.
-                    </p>
-                    <a href="#" class="btn-read">Read More</a>
-                </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-solid fa-paintbrush"></i></div>
+      <h3>Design & Quality Engineering</h3>
+      <p>User-centered UI/UX design, test automation with Selenium & Cypress, performance testing, and accessibility audits.</p>
+      <a href="#">Learn More <span>→</span></a>
+    </div>
 
-                <div class="srv-card">
-                    <h3  class="srv-card-title">Website Development</h3>
-                    <p  class="srv-card-text">Our skilled web development services help transform your
-                        online presence. We create visually appealing,
-                        functional websites that attract and engage your target
-                        audience.
-                        Elevate your brand with our expertise in creating
-                        effective digital experiences that deliver results.</p>
-                    <a href="#" class="btn-read">Read More</a>
-                </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
+      <h3>Digital Marketing</h3>
+      <p>Data-driven SEO, Google Ads, social media marketing, content strategy, and conversion optimization to grow your online presence.</p>
+      <a href="#">Learn More <span>→</span></a>
+    </div>
 
-                <div class="srv-card">
-                    <h3  class="srv-card-title">Email & Landing Page Development</h3>
-                    <p class="srv-card-text">Engage your audience and increase conversions with our
-                        professionally designed landing page and email
-                        templates. Our solutions increase engagement and
-                        effectiveness, ensuring your message resonates and
-                        converts successfully in every marketing campaign.
-                    </p>
-                   <a href="#" class="btn-read">Read More</a>
-                </div>
+  </div>
+</section>
+  <main class="page">
+      <svg
+        class="blob blob-tl"
+        viewBox="0 0 300 190"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M0 0 L300 0 Q220 42 170 94 Q118 162 0 150 Z"
+          fill="#a7d4ad"
+          fill-opacity=".43"
+        />
+      </svg>
+      <svg
+        class="blob blob-br"
+        viewBox="0 0 400 250"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M400 250 L0 250 Q104 228 170 176 Q260 104 400 66 Z"
+          fill="#9ed3a5"
+          fill-opacity=".5"
+        />
+      </svg>
+      <div class="dg dg-l" aria-hidden="true"></div>
+      <div class="dg dg-r" aria-hidden="true"></div>
 
+      <div class="wrap">
+        <header class="hd">
+          <p class="ey"><span>WHY CHOOSE US</span></p>
+          <h1>We Offer <em>Expert Services</em></h1>
+          <p>To Drive Your Business Forward</p>
+          <div class="dots">
+            <span class="dt"></span><span class="ds"></span>
+            <span class="da"></span>
+            <span class="ds"></span><span class="dt"></span>
+          </div>
+        </header>
+
+        <section class="shell">
+          <div class="stage" id="stage">
+            <div class="orbit">
+              <div class="ring ring-o"></div>
+              <div class="ring ring-i"></div>
+              <div class="clogo"><span class="logo-mark">P5</span></div>
             </div>
+          </div>
         </section>
 
-    </body>
+        <section class="mob">
+          <div class="mob-lw">
+            <div class="ring ring-o" style="inset: 0; position: absolute"></div>
+            <div
+              class="ring ring-i"
+              style="inset: 17px; position: absolute"
+            ></div>
+            <div class="clogo-sm"><span class="logo-mark">P5</span></div>
+          </div>
+          <div class="mgrid" id="mgrid"></div>
+        </section>
 
+        <section class="cta">
+          <div class="dm">
+            <span class="dl"></span>
+            <span class="dc">
+              <svg
+                width="11"
+                height="11"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 5v14" />
+                <path d="m19 12-7 7-7-7" />
+              </svg>
+            </span>
+          </div>
+          <h2>Let's Build Something <em>Great</em> Together</h2>
+          <button class="cbtn">
+            GET IN TOUCH
+            <span class="arr"
+              ><svg
+                width="11"
+                height="11"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" /></svg></span>
+          </button>
+        </section>
+      </div>
+    </main>
+
+<footer class="footer">
+  <div class="footer-overlay"></div>
+
+  <div class="footer-container">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <img src="static/images/favicon.png" alt="Paarsiv Logo" class="footer-logo">
+        <p>
+          The future isn't a battle between humans and machines,<br>
+          but a partnership where they work together.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About Us</a>
+        <a href="#">Help & FAQs</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms and Conditions</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+      </div>
+
+      <div class="footer-col contact">
+        <h4>Contact Info</h4>
+        <p>Jaipur - 302019</p>
+        <p>info@paarsiv.com<br>support@paarsiv.com</p>
+      </div>
+
+    </div>
+
+    <div class="footer-line"></div>
+
+    <div class="footer-bottom">
+      <p>Copyright © 2024 Paarsiv - All Rights Reserved</p>
+
+      <div class="footer-menu">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.querySelector(".custom-navbar");
+  const logo = document.getElementById("logo");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+
+      // 👇 dark logo (white bg ke liye)
+    //    <img src="static/images/paarsiv-1.png" class="hero-img" alt="service">
+      logo.src = "static/images/paarsiv-1.png";
+
+    } else {
+      navbar.classList.remove("scrolled");
+
+      // 👇 original logo (transparent bg ke liye)
+      logo.src = "static/images/paarsiv.logo.png";
+    }
+  });
+</script>
+
+ <script>
+      const IC = {
+        monitor: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>`,
+        smartphone: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>`,
+        shield: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>`,
+        cloud: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>`,
+        chart: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>`,
+        headphones: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>`,
+      };
+
+      const SW = 1100,
+        SH = 580,
+        CX = SW / 2,
+        CY = SH / 2;
+      const R = 180; // orbit ring radius
+      const CW = 300,
+        CH = 118;
+      const GAP = 44; // gap from ring edge to card tip — matches image spacing
+
+      const SVC = [
+        // LEFT cards — tip points RIGHT toward center
+        {
+          a: 222,
+          s: "l",
+          t: "Web Development",
+          d: "Modern & responsive\nweb solutions",
+          i: "monitor",
+          c: "ce",
+          dc: "od-e",
+        },
+        {
+          a: 180,
+          s: "l",
+          t: "Cybersecurity",
+          d: "Protect your data\n& systems",
+          i: "shield",
+          c: "co",
+          dc: "od-o",
+        },
+        {
+          a: 138,
+          s: "l",
+          t: "Data Analytics",
+          d: "Turn data into\nmeaningful insights",
+          i: "chart",
+          c: "cp",
+          dc: "od-p",
+        },
+        // RIGHT cards — tip points LEFT toward center
+        {
+          a: 318,
+          s: "r",
+          t: "Mobile Development",
+          d: "Scalable mobile apps\nfor iOS & Android",
+          i: "smartphone",
+          c: "cb",
+          dc: "od-b",
+        },
+        {
+          a: 0,
+          s: "r",
+          t: "Cloud Solutions",
+          d: "Secure & reliable\ncloud services",
+          i: "cloud",
+          c: "cp",
+          dc: "od-p",
+        },
+        {
+          a: 42,
+          s: "r",
+          t: "IT Support",
+          d: "24/7 support for your\nbusiness needs",
+          i: "headphones",
+          c: "cy",
+          dc: "od-y",
+        },
+      ];
+
+      const stage = document.getElementById("stage");
+      const mgrid = document.getElementById("mgrid");
+
+      SVC.forEach((sv) => {
+        const rad = (sv.a * Math.PI) / 180;
+        const dx = Math.cos(rad),
+          dy = Math.sin(rad);
+
+        // Dot sits ON the ring
+        const dotX = CX + R * dx,
+          dotY = CY + R * dy;
+        const dot = document.createElement("span");
+        dot.className = `odot ${sv.dc}`;
+        dot.style.cssText = `left:${dotX - 5}px;top:${dotY - 5}px`;
+        stage.appendChild(dot);
+
+        // Card tip is GAP pixels beyond the ring dot
+        const tipX = CX + (R + GAP) * dx;
+        const tipY = CY + (R + GAP) * dy;
+
+        // Left cards: right pointed tip = tipX → card starts at tipX - CW
+        // Right cards: left pointed tip = tipX → card starts at tipX
+        const cardL = sv.s === "l" ? tipX - CW : tipX;
+        const cardT = tipY - CH / 2;
+
+        const wrap = document.createElement("div");
+        wrap.className = "cw";
+        wrap.style.cssText = `left:${cardL}px;top:${cardT}px;width:${CW}px`;
+        wrap.innerHTML = `<article class="sc sc-${sv.s} ${sv.c}">
+    <div class="si">${IC[sv.i]}</div>
+    <div class="sb"><h3>${sv.t}</h3><div class="sbar"></div><p>${sv.d}</p></div>
+  </article>`;
+        stage.appendChild(wrap);
+
+        const mw = document.createElement("div");
+        mw.className = "cw";
+        mw.innerHTML = `<article class="sc sc-${sv.s} ${sv.c}">
+    <div class="si">${IC[sv.i]}</div>
+    <div class="sb"><h3>${sv.t}</h3><div class="sbar"></div><p>${sv.d}</p></div>
+  </article>`;
+        mgrid.appendChild(mw);
+      });
+
+      function fit() {
+        const shell = stage.parentElement;
+        const sc = Math.min(1, shell.clientWidth / SW);
+        shell.style.setProperty("--sc", sc);
+        shell.style.height = sc < 1 ? `${SH * sc}px` : "";
+      }
+      fit();
+      window.addEventListener("resize", fit);
+    </script>
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
 </html>
 
 
